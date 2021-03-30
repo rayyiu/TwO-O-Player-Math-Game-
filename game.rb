@@ -6,8 +6,8 @@ class Game
     
     def initialize 
     puts "\n GAME STARTING"    
-    @player1 = Players.new("Player 1")
-    @player2 = Players.new("Player 2")
+    @player1 = Player.new("Player 1")
+    @player2 = Player.new("Player 2")
     @current_player = @player1 
     puts "\n Current Player is #{@current_player.name}\n"
     play()

@@ -3,7 +3,7 @@ require './question'
 require './game'
 require './player'
 
-game = Game.New 
+game = Game.new
 
 
 #instantiate game(Game.new)
