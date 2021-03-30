@@ -9,5 +9,4 @@ class Player
     def lose_life 
         self.lives = self.lives - 1
 end 
-
 end 

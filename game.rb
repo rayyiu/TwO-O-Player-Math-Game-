@@ -19,7 +19,8 @@ class Game
         
     def play
         loop do 
-           question = Question.new
+           question = Question.new (@current_player)
+           question.ask
            player_guess = gets.chomp.to_i 
             if question.answer == player_guess
                 puts "#{player_guess}? Live to fight another round"
@@ -37,7 +38,8 @@ class Game
             end 
         end 
     end 
-            
+        
+
 
             def game_over 
                 if @player1.lives == 0 

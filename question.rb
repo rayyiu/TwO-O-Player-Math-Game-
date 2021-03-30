@@ -1,14 +1,17 @@
 require './player'
 
 class Question 
-    attr_accessor :question, :answer 
+    attr_accessor :question, :answer
 
-    def initialize()
+    def initialize(name)
         num1 = rand(1..50)
         num2 = rand(1..50)
-        syms = [:+, :-, :*, :/].sample
-        answer = num1.send(syms, num2)
-        player_query = "#{current_player}, what is #{num1} #{syms} #{num2} equals to?"
+        symbols = [:+, :-, :*, :/].sample
+        @answer = num1.send(symbols, num2)
+        @question = "#{name.name}, what is #{num1} #{symbols} #{num2} equals to?"
     end
-end 
 
+    def ask
+        puts @question
+    end 
+end 
